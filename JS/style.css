@@ -1,0 +1,176 @@
+:root{
+    --large: 3rem;
+    --medium: 2rem;
+    --small: 1rem;
+
+    --mb1: 1rem; 
+    --mb2: 2rem; 
+    --mb5: 3rem; 
+    
+    --mt1: 0.25rem;
+    --mt2: 0.5rem;
+    --mt5: 3rem;
+    
+    --ml1: 0.2rem;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    padding: var(--mt1) var(--ml1); 
+}
+
+
+.scene{
+    height: 100vh;
+}
+
+.title{
+    text-align: center;
+    font-size: var(--large);
+    margin-bottom: var(--mb1);
+}
+
+.health-bar{
+    position: relative;
+    display: flex;
+    height: 2rem;
+    border: 2px solid rgb(240, 240, 44);
+    margin-top: var(--mt1);
+}
+
+.health-bar__carl, .health-bar__beast{
+    height: 100%;
+    width: 50%;
+    transform: scaleX(1);
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.health-bar__carl{
+    background-color: brown;
+    transform-origin: left;
+}
+
+.health-bar__beast{
+    background-color: rgb(51, 51, 199);
+    transform-origin: right;
+    justify-content: flex-end;
+}
+
+.health-bar__middle{
+    height: 100%;
+    width: 0.1rem;
+    background-color: black;
+}
+
+.health-bar__carl__health, .health-bar__beast__health{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: var(--small);
+}
+
+.health-bar__beast__health{
+    right: 0;
+}
+
+.damage {
+    font-size: var(--small);
+}
+
+.characters.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.character.container h3{
+    max-width: 300px;
+}
+
+.character.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.carl-powers__container{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.carl-powers__container img{
+    max-width: 100px;
+    filter: opacity(0);
+    transition: all 0.3s;
+}
+
+#carl, #beast{
+    transition: all 0.3s ease-in-out;
+}
+
+#beast{
+    min-width: 160px;
+    align-self: center;
+}
+
+#carl{
+    align-self: center;
+}
+
+#winner{
+    color: rgb(27, 172, 27);
+}
+
+.flashWinner{
+    animation: flashWinner 0.5s infinite alternate ease-in-out;
+}
+
+.stats{
+    margin-top: var(--mt2);
+}
+
+.attack{
+    background-color: aquamarine;
+}
+
+.defend{
+    background-color: red;
+}
+
+.miss{
+    background-color: yellow;
+}
+
+@keyframes flashWinner {
+    from{
+        filter: opacity(0);
+    } 
+    to{
+        filter: opacity(1);
+    }
+}
+
+@media screen and (max-width: 780px){
+    :root{
+        --mb5: 3rem;
+        --large: 2.5rem;
+        --medium: 1.5rem;
+        --small: 0.8rem;
+    }
+    
+}
