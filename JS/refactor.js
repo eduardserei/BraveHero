@@ -373,10 +373,11 @@ function switchStance(character1, character2) {
         character2.stance = STANCES[1]
     }
 
-    stancesFlash(character1, character2) // display
+    
 }
 
 function round(character1, character2) {
+    stancesFlash(carl, beast) // display
     if(character1.stance === 'attacker'){
         character1.attack(character2)
     } else {
@@ -404,6 +405,7 @@ function fight() {
 
     const intervalKey = setInterval(() => {
         roundCount++;
+        // stancesFlash(carl, beast) // display
         document.querySelector('#round').innerText = roundCount;
         
         round(carl, beast);

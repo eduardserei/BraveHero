@@ -55,18 +55,18 @@ class Character{
     }
 
     public function logStats(){
-        // $areNoroc = $this->noroc['areNoroc'];
-        // $valoareNoroc = $this->noroc['valoareNoroc'];
-        // console_log("
-        // === $this->nume stats === 
-        // stance: $this->stance;
-        // viata: $this->viata;
-        // putere: $this->putere;
-        // aparare: $this->aparare;
-        // viteza: $this->viteza;
-        // are noroc: $areNoroc;
-        // valoare noroc: $valoareNoroc;
-        // ");
+        $areNoroc = $this->noroc['areNoroc'];
+        $valoareNoroc = $this->noroc['valoareNoroc'];
+        console_log("
+        === $this->nume stats === 
+        stance: $this->stance;
+        viata: $this->viata;
+        putere: $this->putere;
+        aparare: $this->aparare;
+        viteza: $this->viteza;
+        are noroc: $areNoroc;
+        valoare noroc: $valoareNoroc;
+        ");
     }
 
     public function update_health($damage){
